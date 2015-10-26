@@ -2,7 +2,7 @@ chrome.webRequest.onBeforeRequest.addListener(
   function(details){ 	
 	var url = details.url;
   
-	if (url.indexOf("mrm.channel4.com/ad") != -1 || url.indexOf("crossdomain.xml") != -1) {
+	if (url.indexOf("mrm.channel4.com/ad") != -1 || url.indexOf("crossdomain.xml") != -1 || url.indexOf("VPAIDIRollPackage.swf")) {
 		return { cancel: false };
 	}
 	if (url.search("anno.channel4.com(.*)_[A-Z]{5}\\.") != -1) {
